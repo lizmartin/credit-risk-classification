@@ -8,18 +8,17 @@ This analysis used various techniques to train and evaluate a model based on loa
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
+I did try a few different solvers to see the impact on the predictions. I ended up going with Newton-CG since provided the best outcomes which were relatively similar to LBFGS (Limited-memory Broyden-Fletcher-Goldfarb-Shanno). The model was able to predict the loan risk with an accuracy of 99% and a f1 score of 89%.
 
 * Machine Learning Model 1:
 Classification scores for high-risk loans:
 
-Accuracy Score - 99%
-Even though the accuracy is near perfect, it is almost too good to trust. This is evident when the f1 score for high-risk loans is down to 89%.
-Precision Score - 85%
-Out of all the borrowers that the model predicted would be high-risk, 85% actually were.
-Recall Score - 93%
-Out of all the borrowers that ended up being high-risk, the model made correct predictions 93% of the time.
+    * Accuracy Score - 99%
+        * Even though the accuracy is near perfect, it is not as reliable as may be required. This is evident when the f1 score for high-risk loans is 89%.
+    * Precision Score - 85%
+        * Out of all the borrowers that the model predicted would be high-risk, 85% actually were.
+    * Recall Score - 93%
+        * Out of all the true high-risk borrowers, the model made correct predictions 93% of the time.
 
 ## Summary
-
-The model predicts fairly accurately and with moderate percision. With an accuracy 
+The model predicts fairly accurately and with moderate percision. Of borrowers who were truly high risk, the model only predicted correctly 93% of the time. This may not be as reliable as it may be required for the company and regulatory needs. However, the model is still useful for identifying high-risk borrowers.
