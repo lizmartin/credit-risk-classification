@@ -2,26 +2,24 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+Predicting lending risk is critical for any lending company to maintain financial stability, ensuring regulatory compliance, and providing fair, equitible, and efficient lending services to customer. Risk Management helps reduce the likelihood of defaults on loans and potenital financial losses. It is also important for maintaining profitability by offering more favorable lending terms to low risk customers and higher interest rates to higher risk customers fo compensate for the risk. 
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+This analysis used various techniques to train and evaluate a model based on loan risk. I used a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers. In order to create the logical regression model, I had to split the data into training and testing sets. After fitting the training data to the model I saved the predictions on the testing data. Finally, I evaluated the model with a confusion matrix and classification report to determine the accuracy of the model.
 
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+Classification scores for high-risk loans:
+
+Accuracy Score - 99%
+Even though the accuracy is near perfect, it is almost too good to trust. This is evident when the f1 score for high-risk loans is down to 89%.
+Precision Score - 85%
+Out of all the borrowers that the model predicted would be high-risk, 85% actually were.
+Recall Score - 93%
+Out of all the borrowers that ended up being high-risk, the model made correct predictions 93% of the time.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+The model predicts fairly accurately and with moderate percision. With an accuracy 
